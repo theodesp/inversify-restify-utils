@@ -28,7 +28,7 @@
   "homepage": "https://github.com/inversify/inversify-restify-utils#readme",
   "devDependencies": {
     "@types/chai": "^3.4.32",
-    "@types/mocha": "^2.2.31",
+    "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.0",
     "@types/restify": "^2.0.30",
     "@types/sinon": "^2.1.0",
