@@ -36,7 +36,7 @@ describe("Unit Test: InversifyRestifyServer", () => {
             @Method("get", "/routeOne")
             public routeOne() { return; }
 
-            @Method("get", { additionalOptions: "test", path: "/routeTwo" })
+            @Method("get", { additionalOptions: {test: "test"}, path: "/routeTwo" })
             public routeTwo() { return; }
         }
 
@@ -50,7 +50,7 @@ describe("Unit Test: InversifyRestifyServer", () => {
 
         let routeTwo = app.router.routes.GET.find(route => route.spec.path === "/root/routeTwo");
         expect(routeTwo).not.to.be.undefined;
-        expect((<any>routeTwo).spec.additionalOptions).to.eq("test");
+        expect((<any>routeTwo).spec.additionalOptions.test).to.eq("test");
 
     });
 });

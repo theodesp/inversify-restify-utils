@@ -1,4 +1,5 @@
 import * as restify from "restify";
+import { types } from "./types";
 
 namespace interfaces {
 
@@ -8,7 +9,7 @@ namespace interfaces {
         target: any;
     }
 
-    export type RouteOptions = string | RegExp | { path: string | RegExp  } & Object;
+    export type RouteOptions = types.Path;
 
     export interface ControllerMethodMetadata {
         options: RouteOptions;
